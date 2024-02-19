@@ -28,12 +28,12 @@ function Images() {
   })
   return (
     <group ref={group}>
-      <Image position={[-2, 0, 0]} scale={[4, height, 1]} url="/3593865.jpeg" />
+      <Image position={[-2, 0, 0]} scale={[4, height, 1]} url="/bg7.webp" />
       <Image position={[2, 0, 1]} scale={3} url="/img16.jpeg" />
-      <Image position={[-2.3, -height, 2]} scale={[1, 3, 1]} url="/5185180.jpeg" />
-      <Image position={[-0.6, -height, 3]} scale={[1, 2, 1]} url="/5083491.jpeg" />
-      <Image position={[0.75, -height, 3.5]} scale={1.5} url="/532173.jpeg" />
-      <Image position={[0, -height * 1.5, 2.5]} scale={[1.5, 3, 1]} url="/963486.jpeg" />
+      <Image position={[-2.3, -height, 2]} scale={[1, 3, 1]} url="/6193145.jpeg" />
+      <Image position={[-0.6, -height, 3]} scale={[1, 2, 1]} url="/img21.jpeg" />
+      <Image position={[0.75, -height, 3.5]} scale={1.5} url="/quesada.jpeg" />
+      <Image position={[0, -height * 1.5, 2.5]} scale={[1.5, 3, 1]} url="/532173.jpeg" />
       <Image position={[0, -height * 2 - height / 4, 0]} scale={[width, height / 2, 1]} url="/me-camera.jpeg" />
     </group>
   )
@@ -50,7 +50,7 @@ export default function App() {
           <Scroll html>
             <h2 style={{ position: 'relative', top: '10vh', left: '3em' }}>Payam Dowlatyari</h2>
             <p style={{ position: 'relative', top: '8vh', left: '5em' }}>- Designer</p>
-            <h1 style={{ position: 'absolute', top: '120vh', left: '1em', mixBlendMode: "difference"}}>UX</h1>
+            <h1 style={{ position: 'absolute', top: '120vh', left: '0.5vw', mixBlendMode: "difference"}}>UX</h1>
             <h1 style={{ position: 'absolute', top: '198.5vh', left: '0.5vw', fontSize: '30vw' }}>Design</h1>
           </Scroll>
         </ScrollControls>
