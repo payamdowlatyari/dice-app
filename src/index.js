@@ -1,12 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { createRoot } from 'react-dom/client'
+import './styles.css'
+import App from './App'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function Overlay() {
+  return (
+    <div style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
+      <a href="https://www.payamd.com/" style={{ position: 'absolute', bottom: 40, left: 90, fontSize: '13px' }}>
+        payamd.com
+        {" © "}
+      {new Date().getFullYear()}
+      </a>
+      <div style={{ position: 'absolute', top: 40, left: 40, fontSize: '13px' }}>hello —</div>
+      <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '13px' }}></div>
+    </div>
+  )
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+createRoot(document.getElementById('root')).render(
+  <>
+    <App />
+    <Overlay />
+  </>
+)
