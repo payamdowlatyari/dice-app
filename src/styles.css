@@ -1,7 +1,11 @@
 @import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
 
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 html,
@@ -13,27 +17,295 @@ body,
   padding: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
+  --white: #efefef;
+  --black: #000000;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+
+  --background: var(--black);
+  --text: var(--white);
+  --accent: var(--yellow);
+
+  background-color: var(--background);
+  color: var(--text);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   overscroll-behavior: none;
-  background: #efefef;
+  /* font-family: "Bebas Neue", sans-serif; */
+  /* font-family: "Anton", sans-serif; */
   font-family: 'Inter var', sans-serif;
-  cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4='),
-    auto;
+  /* font-family: "Federo", sans-serif; */
+  cursor: auto;
 }
 
 h1 {
-  font-size: 20em;
+  font-size: 10em;
   font-weight: 400;
   letter-spacing: -0.05em;
-  line-height: 0.7em;
+  line-height: 0.8em;
   margin: 0;
   padding: 0;
 }
 
+h2{
+  font-size: 5em;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.8em;
+  margin: 0;
+  padding: 0;
+}
+
+h3{
+  font-size: 2em;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  line-height: 0.8em;
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+p {
+  font-size: 1em;
+}
+
 a {
   pointer-events: all;
-  background: black;
-  color: white;
+  color: var(--accent);
   padding: 10px;
   text-decoration: none;
+}
+
+section{
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  /* display: flex; */
+  /* position: static; */
+  mix-blend-mode: exclusion;
+  /* scroll-snap-align: start; */
+  padding: 0;
+  margin: 0;
+}
+
+#cursor {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--accent);
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transition: transform .15s ease-in-out;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 500px;
+  max-width: 100vw;
+  background: var(--accent);
+  padding-top: 100px;
+  transform: translateX(-100%);
+  will-change: transform;
+}
+
+ul {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+}
+
+li {
+  color: var(--background);
+  display: block;
+  transform-origin: -20px 50%;
+  font-size: 64px;
+  padding: 10px;
+  will-change: transform, opacity, filter;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+  padding: 10px;
+}
+
+button path {
+  fill: var(--background);
+}
+
+footer{
+  position: absolute;
+  font-size: 0.75em;
+  bottom: 0;
+  display: grid;
+  height: 10vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.one a {
+  margin: 0 20px 0 0;
+  position: relative;
+  color: var(--white);
+}
+
+.one a:before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--white);
+  content: '';
+  -webkit-transform: translateY(10px);
+  opacity: 0;
+  transition-property: -webkit-transform, opacity;
+  transition-duration: .5s;
+}
+
+.one a:hover:before {
+  -webkit-transform: translateY(0);
+  opacity: 1;
+}
+
+.two a {
+  margin: 0 2px;
+  position: relative;
+  color: var(--white);
+}
+
+.two a:before {
+  position: absolute;
+  margin: 0 auto;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+  content: '';
+  opacity: .3;
+  -webkit-transform: scaleX(.9);
+  transition-property: opacity, -webkit-transform;
+  transition-duration: .5s;
+}
+
+.two a:hover:before {
+  opacity: 1;
+  -webkit-transform: scaleX(1);
+}
+
+.three a {
+  position: relative;
+}
+
+.three a::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color:  var(--accent);
+  transform-origin: center;
+  transform: translate(-50%, 0) scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.three a:hover::before {
+  transform: translate(-50%, 0) scaleX(1);
+}
+
+.text-reveal {
+  overflow: hidden;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: white;
+}
+
+.text-reveal span {
+  display: inline-block;
+  animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes reveal {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.circle {
+  position: absolute;
+  z-index: 100;
+  top: 34em;
+  left: 10%;
+  aspect-ratio: 1;
+}
+
+.letter {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  color: var(--text);
+}
+
+.img-particles{
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.contacts{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 750px;
+  max-width: 100vw;
+  padding: 1em;
+}
+
+.contacts div{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1em;
 }

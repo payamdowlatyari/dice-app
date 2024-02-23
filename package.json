@@ -3,17 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "framer-motion": "^10.16.4",
-    "react-router-dom": "^6.18.0",
-    "react-scripts": "5.0.1",
     "@pmndrs/branding": "0.0.8",
+    "@react-hook/mouse-position": "^4.1.3",
+    "@react-icons/all-files": "^4.1.0",
     "@react-three/drei": "9.45.1",
     "@react-three/fiber": "8.9.1",
+    "@types/react-dom": "^18.2.19",
     "@types/three": "0.146.0",
+    "framer-motion": "^10.16.4",
     "react": "18.2.0",
+    "react-animate-on-scroll": "^2.1.7",
+    "react-blob": "^2.1.0",
     "react-dom": "18.2.0",
+    "react-image-particles": "^1.0.8",
+    "react-intersection-observer": "^9.8.0",
+    "react-reveal-effect": "^3.2.3",
+    "react-router-dom": "^6.18.0",
+    "react-scripts": "5.0.1",
+    "react-text-reveal": "^1.1.2",
+    "react-type-animation": "^3.2.0",
+    "stagger-text-reveal-animation": "^1.0.0",
     "styled-components": "5.3.6",
-    "three": "0.146.0"
+    "three": "0.146.0",
+    "tw-elements": "^1.1.0",
+    "use-dencrypt-effect": "^2.0.0"
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
@@ -35,5 +48,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
   }
 }
