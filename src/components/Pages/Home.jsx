@@ -5,8 +5,8 @@ export default function Home() {
     return (
         <section id='home'>
             <Spinner />
-            <h2 style={{ position: 'absolute', top: '1em', left: '1em'  }}>Payam <br /> Dowlatyari</h2>
-            <div style={{ position: 'absolute',  top: '28em', left: '12em' }}>
+            <h2 className='main-title'>Payam <br /> Dowlatyari</h2>
+            <div className='sub-title'>
             <TypeAnimation
                 sequence={[
                     'I am a Software Engineer',

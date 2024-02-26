@@ -5,7 +5,7 @@ export default function Contact(){
     return (
         <section id='contact'
         style={{
-            height: "130vh"
+            height: "150vh"
         }}
         >
             <AnimatedTitle text="Contact"/>

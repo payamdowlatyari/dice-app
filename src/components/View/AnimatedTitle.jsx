@@ -4,7 +4,6 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const Title = styled.h2`
-  font-size: 15rem;
   font-weight: 400;
   line-height: 1.5em;
 `;
@@ -61,7 +60,7 @@ export default function AnimatedTitle({text}) {
   };
   
   return (
-    <Title aria-label={text} role="heading">
+    <Title aria-label={text} role="heading" className="section-title">
       {text.split(" ").map((word, index) => {
         return (
           <Word

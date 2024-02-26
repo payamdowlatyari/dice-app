@@ -184,17 +184,17 @@ ul{
 }
 
 .slide__headline {
-  font-size: 2vmin;
+  font-size: 1em;
   font-weight: 600;
   position: absolute;
   margin: auto;
-  bottom: 25%;
+  bottom: 20%;
 }
 
 .slide__content {
   --d: 50;
   opacity: 0;
-  padding: 4vmin;
+  padding: 0.5em;
   position: relative;
   width: 100%;
   transition: transform var(--base-duration) var(--base-ease);
@@ -204,7 +204,7 @@ ul{
 .slide__desc {
     color: gray;
     position: absolute;
-    bottom: 20%;
+    bottom: 10%;
 }
 .slide--current .slide__content {
   -webkit-animation: fade-in calc(var(--base-duration) / 2) var(--base-ease) forwards;

@@ -157,18 +157,6 @@ button path {
   fill: var(--background);
 }
 
-footer{
-  position: absolute;
-  font-size: 0.75em;
-  bottom: 0;
-  display: flex;
-  height: 20vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 10px;
-}
-
 .one a {
   margin: 0 20px 0 0;
   position: relative;
@@ -267,7 +255,7 @@ footer{
 .circle {
   position: absolute;
   z-index: 100;
-  top: 34em;
+  top: 60vh;
   left: 10%;
   aspect-ratio: 1;
 }
@@ -355,4 +343,70 @@ footer{
 		padding: 1vh 0;
 		font-size: 1.5em;
 	}
+}
+
+footer{
+  position: absolute;
+  font-size: 0.75em;
+  bottom: 2vh;
+  display: flex;
+  height: 20vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.main-title{
+  font-size: 10em;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  top: 15vh;
+  left: 5vw;
+}
+
+.sub-title{
+  font-size: 2em;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  top: 45vh;
+  left: 6vw;
+}
+
+.section-title{
+  font-size: 15em;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 720px) {
+	h2{
+    font-size: 7.5em;
+  }
+  footer{
+    bottom: 10vh;
+  }
+  .main-title{
+    font-size: 7.5em;
+  }
+  .sub-title{
+    font-size: 1.75em;
+  }
+  .section-title{
+    font-size: 10em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+	h2{
+    font-size: 5em;
+  }
+  .main-title{
+    font-size: 5em;
+  }
+  .sub-title{
+    font-size: 1.5em;
+  }
+  .section-title{
+    font-size: 5em;
+  }
 }
