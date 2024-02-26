@@ -1,7 +1,5 @@
 @import url('https://rsms.me/inter/inter.css');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
 
 * {
   box-sizing: border-box;
@@ -40,15 +38,13 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overscroll-behavior: none;
-  /* font-family: "Bebas Neue", sans-serif; */
-  /* font-family: "Anton", sans-serif; */
   font-family: 'Inter var', sans-serif;
-  /* font-family: "Federo", sans-serif; */
   cursor: auto;
 }
 
 h1 {
-  font-size: 10em;
+  font-size: 15em;
+  max-width: 100vw;
   font-weight: 400;
   letter-spacing: -0.05em;
   line-height: 0.8em;
@@ -57,7 +53,8 @@ h1 {
 }
 
 h2{
-  font-size: 5em;
+  font-size: 10em;
+  max-width: 100vw;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   letter-spacing: -0.05em;
@@ -90,26 +87,37 @@ section{
   min-height: 100vh;
   width: 100vw;
   overflow: hidden;
-  /* display: flex; */
-  /* position: static; */
   mix-blend-mode: exclusion;
-  /* scroll-snap-align: start; */
   padding: 0;
   margin: 0;
 }
 
 #cursor {
   position: absolute;
-  width: 30px;
-  height: 30px;
-  background: var(--accent);
+  width: 25px;
+  height: 25px;
+  background: var(--white);
   border-radius: 50%;
   mix-blend-mode: difference;
   pointer-events: none;
-  transition: transform .15s ease-in-out;
+  transition: transform ease-out 0.1s;
 }
 
-.menu {
+#stalker {
+  position: fixed;
+  margin-top: -10px;
+  margin-left: -10px;
+  width: 45px;
+  height: 45px;
+  box-shadow: 0 0 50px 5px #ddeeee8a;
+  border-radius: 50%;
+  border-radius: 100%;
+  pointer-events: none;
+  transition: transform ease-out 0.3s;
+  z-index: 999;
+}
+
+/* .menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -120,24 +128,7 @@ section{
   padding-top: 100px;
   transform: translateX(-100%);
   will-change: transform;
-}
-
-ul {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  gap: 10px;
-  padding: 15px;
-}
-
-li {
-  color: var(--background);
-  display: block;
-  transform-origin: -20px 50%;
-  font-size: 64px;
-  padding: 10px;
-  will-change: transform, opacity, filter;
-}
+} */
 
 ul,
 li {
@@ -170,11 +161,11 @@ footer{
   position: absolute;
   font-size: 0.75em;
   bottom: 0;
-  display: grid;
-  height: 10vh;
+  display: flex;
+  height: 20vh;
   width: 100vw;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   padding: 10px;
 }
 
@@ -298,7 +289,6 @@ footer{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 750px;
   max-width: 100vw;
   padding: 1em;
 }
@@ -308,4 +298,61 @@ footer{
   flex-direction: column;
   flex-wrap: wrap;
   padding: 1em;
+}
+
+
+.menu__item {
+	flex: none;
+	padding: 0 1rem 0 0;
+}
+
+.menu__item-inner {
+	white-space: nowrap;
+	position: relative;
+	cursor: pointer;
+	padding: 0.5rem;
+	display: block;
+	color: var(--text);
+	transition: transform 0.5s;
+}
+
+.menu__item-inner:hover {
+	font-style: italic;
+	transform: translate3d(2rem,0,0);
+	color: var(--accent);
+}
+
+.menu__item-inner::before {
+	content: '';
+	top: 55%;
+	width: 2.5rem;
+	height: 1px;
+	background: currentColor;
+	position: absolute;
+	right: calc(100% + 2rem);
+	opacity: 0;
+	pointer-events: none;
+}
+
+.menu__item-inner:hover::before {
+	opacity: 1;
+}
+
+.menu__item-inner:hover::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -5.5rem;
+	right: 0;
+	height: 100%;
+}
+
+@media screen and (min-width: 53em) {
+	.menu__item {
+		margin-right: 25vw;
+	}
+	.menu__item-inner {
+		padding: 1vh 0;
+		font-size: 1.5em;
+	}
 }

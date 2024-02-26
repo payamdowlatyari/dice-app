@@ -9,6 +9,7 @@ import Contact from './components/Pages/Contact'
 import Flag from './components/View/Flag'
 import Images from './components/View/Images'
 import Items from './components/View/Items'
+// import Services from './components/Pages/Services'
 
 export default function App() {
 
@@ -16,12 +17,13 @@ export default function App() {
 
     <Canvas orthographic camera={{ zoom: 80 }} gl={{ alpha: false, antialias: false, stencil: false, depth: false }} dpr={[1, 1.5]}>
       <Suspense fallback={null}>
-        <ScrollControls damping={4} pages={4}> 
+        <ScrollControls damping={6} pages={5}> 
             <Items />
           <Scroll html>
            <Home />
            <About />
            <Portfolio />
+           {/* <Services /> */}
            <Contact />
            <Footer/>
           </Scroll>

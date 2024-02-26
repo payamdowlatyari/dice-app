@@ -2,10 +2,10 @@ import { social } from "./data/about";
 
 export default function Social() {
     return (
-      <h3 className="three">
+        <div className='menu__item'>
         {social.map((item) => {
-          return <a href={item.url} >{item.name}</a>;
+          return <a className='menu__item-inner' href={item.url} >{item.name}</a>;
         })}
-      </h3>
+      </div>
     );
   }

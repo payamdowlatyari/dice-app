@@ -3,26 +3,30 @@ import AnimatedTitle from '../View/AnimatedTitle';
 
 export default function Contact(){
     return (
-        <section id='contact'>
+        <section id='contact'
+        style={{
+            height: "130vh"
+        }}
+        >
             <AnimatedTitle text="Contact"/>
             <div className='contacts'>
 
             
             <div>
                 <h2>Email</h2>
-            <h3 className='three'>
-            <a href='maito:pdowlatyari@gmail.com'>pdowlatyari@gmail.com</a>
-            </h3>
+            <div className='menu__item'>
+            <a className='menu__item-inner' href='maito:pdowlatyari@gmail.com'>pdowlatyari@gmail.com</a>
+            </div>
             </div>
             <div>
                 <h2>Links</h2>
-            <h3 className='three'>
-            <a href='https://payamd-blog.vercel.app'>My Web Blog</a>
-            </h3>
+                <div className='menu__item'>
+            <a className='menu__item-inner' href='https://payamd-blog.vercel.app'>My Web Blog</a>
+            </div>
 
-            <h3 className='three'>
-            <a href='https://payamd-photo.vercel.app'>Photography</a>
-            </h3>
+            <div className='menu__item'>
+            <a className='menu__item-inner' href='https://payamd-photo.vercel.app'>Photography</a>
+            </div>
             </div>
             <div>
                 <h2>Follow</h2>

@@ -2,7 +2,6 @@ import * as THREE from 'three'
 import { useRef, useState } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { MeshDistortMaterial, GradientTexture, useCursor } from '@react-three/drei'
-import { Image } from './Images'
 
 export default function Flag() {
   const ref = useRef()

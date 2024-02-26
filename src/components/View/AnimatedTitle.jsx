@@ -1,12 +1,10 @@
-// AnimatedTitle.js
-
 import { useEffect } from "react";
 import styled from "styled-components";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const Title = styled.h2`
-  font-size: 10rem;
+  font-size: 15rem;
   font-weight: 400;
   line-height: 1.5em;
 `;
@@ -15,11 +13,13 @@ const Word = styled(motion.span)`
   display: inline-block;
   margin-right: 0.25em;
   white-space: nowrap;
+  mix-blend-mode: difference;
 `;
 
 const Character = styled(motion.span)`
   display: inline-block;
   margin-right: 0.01em;
+  mix-blend-mode: difference;
 `;
 
 export default function AnimatedTitle({text}) {

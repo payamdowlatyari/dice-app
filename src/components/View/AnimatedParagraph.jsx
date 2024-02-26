@@ -48,14 +48,14 @@ export default function AnimatedParagraph({text}) {
   
   const characterAnimation = {
     hidden: {
-      opacity: 0.5,
+      opacity: 0.7,
       y: `0.25em`,
     },
     visible: {
       opacity: 1,
       y: `0em`,
       transition: {
-        duration: 0.2,
+        duration: 0.7,
         ease: [0.2, 0.65, 0.3, 0.9],
       },
     },
@@ -73,8 +73,8 @@ export default function AnimatedParagraph({text}) {
             animate={ctrls}
             variants={wordAnimation}
             transition={{
-              delayChildren: index * 0.1,
-              staggerChildren: 0.05,
+              delayChildren: index * 0.02,
+              staggerChildren: 0.1,
             }}
           >
             {word.split("").map((character, index) => {
