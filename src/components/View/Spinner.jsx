@@ -59,17 +59,6 @@ export default function Spinner() {
           </motion.span>
         ))}
       </p>
-      <span
-        style={{
-          mixBlendMode: "difference",
-          left: "30px",
-          position: "absolute",
-          rotate: "60deg",
-          fontSize: "2em",
-          color: "#fff",
-        }}
-      >
-      </span>
     </motion.div>
   );
 }

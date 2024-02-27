@@ -28,7 +28,7 @@ body {
 
   --background: var(--black);
   --text: var(--white);
-  --accent: var(--yellow);
+  --accent: var(--orange);
 
   background-color: var(--background);
   color: var(--text);
@@ -264,7 +264,7 @@ button path {
   position: absolute;
   top: 0;
   left: 50%;
-  color: var(--text);
+  color: var(--accent);
 }
 
 .img-particles{

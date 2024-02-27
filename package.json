@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@14islands/r3f-scroll-rig": "^8.13.1",
     "@gsap/react": "^2.1.0",
     "@pmndrs/branding": "0.0.8",
     "@react-hook/mouse-position": "^4.1.3",

@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@14islands/r3f-scroll-rig':
+    specifier: ^8.13.1
+    version: 8.13.1(@react-three/drei@9.45.1)(@react-three/fiber@8.9.1)(react-dom@18.2.0)(react@18.2.0)(three@0.146.0)
   '@gsap/react':
     specifier: ^2.1.0
     version: 2.1.0
@@ -102,6 +105,45 @@ devDependencies:
     version: 3.4.1
 
 packages:
+
+  /@14islands/lerp@1.0.3:
+    resolution: {integrity: sha512-PiUuf2vrgMc+mk/VN0CaGdnm1E+UvWkstpPFQJ2Sxs9CEa05edWoBhmhjmSCSuEK072rCgXOUkyAYVKviTEqgg==}
+    dependencies:
+      lerp: 1.0.3
+    dev: false
+
+  /@14islands/r3f-scroll-rig@8.13.1(@react-three/drei@9.45.1)(@react-three/fiber@8.9.1)(react-dom@18.2.0)(react@18.2.0)(three@0.146.0):
+    resolution: {integrity: sha512-/9CanySKlzHQoxb9xXdWOBK4Ix/tcgRenuNiFvIH72wvUaEBd2Kd57ViBZQwNp0haVPA/1dbCaowsFCMXYOOqw==}
+    peerDependencies:
+      '@react-three/drei': '>=9.0.0'
+      '@react-three/fiber': '>=8.0.0'
+      react: '>=18.0'
+      react-dom: '>=18.0'
+      three: '>=0.139.0'
+    peerDependenciesMeta:
+      '@react-three/drei':
+        optional: true
+      '@react-three/fiber':
+        optional: true
+    dependencies:
+      '@14islands/lerp': 1.0.3
+      '@juggle/resize-observer': 3.4.0
+      '@react-three/drei': 9.45.1(@react-three/fiber@8.9.1)(react-dom@18.2.0)(react@18.2.0)(three@0.146.0)
+      '@react-three/fiber': 8.9.1(react-dom@18.2.0)(react@18.2.0)(three@0.146.0)
+      '@studio-freight/lenis': 1.0.39
+      '@types/query-string': 6.3.0
+      debounce: 1.2.1
+      fast-deep-equal: 3.1.3
+      query-string: 6.14.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-intersection-observer: 9.8.0(react-dom@18.2.0)(react@18.2.0)
+      supports-webp: 3.0.0
+      suspend-react: 0.0.8(react@18.2.0)
+      three: 0.146.0
+      vecn: 1.3.1
+      zustand: 3.7.2(react@18.2.0)
+    dev: false
 
   /@aashutoshrathi/word-wrap@1.2.6:
     resolution: {integrity: sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==}
@@ -2148,6 +2190,10 @@ packages:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
+  /@juggle/resize-observer@3.4.0:
+    resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
+    dev: false
+
   /@leichtgewicht/ip-codec@2.0.4:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
     dev: false
@@ -3136,6 +3182,13 @@ packages:
 
   /@types/qs@6.9.11:
     resolution: {integrity: sha512-oGk0gmhnEJK4Yyk+oI7EfXsLayXatCWPHary1MtcmbAifkobT9cM9yutG/hZKIseOU0MqbIwQ/u2nn/Gb+ltuQ==}
+    dev: false
+
+  /@types/query-string@6.3.0:
+    resolution: {integrity: sha512-yuIv/WRffRzL7cBW+sla4HwBZrEXRNf1MKQ5SklPEadth+BKbDxiVG8A3iISN5B3yC4EeSCzMZP8llHTcUhOzQ==}
+    deprecated: This is a stub types definition. query-string provides its own type definitions, so you do not need this installed.
+    dependencies:
+      query-string: 6.14.1
     dev: false
 
   /@types/range-parser@1.2.7:
@@ -6522,6 +6575,11 @@ packages:
     dependencies:
       to-regex-range: 5.0.1
 
+  /filter-obj@1.1.0:
+    resolution: {integrity: sha512-8rXg1ZnX7xzy2NGDVkBVaAy+lSlPNwad13BtgSlLuxfIslyt5Vg64U7tFcCt4WS1R0hvtnQybT/IyCkGZ3DpXQ==}
+    engines: {node: '>=0.10.0'}
+    dev: false
+
   /finalhandler@1.2.0:
     resolution: {integrity: sha512-5uXcUVftlQMFnWC9qu/svkWv3GTd2PfUhK/3PLkYNAe7FbqJMt3515HaxE6eRL74GdsriiwujiawdaB1BpEISg==}
     engines: {node: '>= 0.8'}
@@ -8508,6 +8566,10 @@ packages:
     dependencies:
       picocolors: 1.0.0
       shell-quote: 1.8.1
+    dev: false
+
+  /lerp@1.0.3:
+    resolution: {integrity: sha512-70Rh4rCkJDvwWiTsyZ1HmJGvnyfFah4m6iTux29XmasRiZPDBpT9Cfa4ai73+uLZxnlKruUS62jj2lb11wURiA==}
     dev: false
 
   /leva@0.9.35(@types/react-dom@18.2.19)(react-dom@18.2.0)(react@18.2.0):
@@ -10504,6 +10566,16 @@ packages:
       side-channel: 1.0.5
     dev: false
 
+  /query-string@6.14.1:
+    resolution: {integrity: sha512-XDxAeVmpfu1/6IjyT/gXHOl+S0vQ9owggJ30hhWKdHAsNPOcasn5o9BW0eejZqL2e4vMjhAxoW3jVHcD6mbcYw==}
+    engines: {node: '>=6'}
+    dependencies:
+      decode-uri-component: 0.2.2
+      filter-obj: 1.1.0
+      split-on-first: 1.1.0
+      strict-uri-encode: 2.0.0
+    dev: false
+
   /querystring-es3@0.2.1:
     resolution: {integrity: sha512-773xhDQnZBMFobEiztv8LIl70ch5MSF/jUQVlhwFyBILqq96anmoctVIYz+ZRp0qbCKATTn6ev02M3r7Ga5vqA==}
     engines: {node: '>=0.4.x'}
@@ -11670,6 +11742,11 @@ packages:
       - supports-color
     dev: false
 
+  /split-on-first@1.1.0:
+    resolution: {integrity: sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==}
+    engines: {node: '>=6'}
+    dev: false
+
   /split-string@3.1.0:
     resolution: {integrity: sha512-NzNVhJDYpwceVVii8/Hu6DKfD2G+NrQHlS/V/qgv763EYudVwEcMQNxd2lh+0VrUByXN/oJkl5grOhYWvQUYiw==}
     engines: {node: '>=0.10.0'}
@@ -11767,6 +11844,11 @@ packages:
 
   /stream-shift@1.0.3:
     resolution: {integrity: sha512-76ORR0DO1o1hlKwTbi/DM3EXWGf3ZJYO8cXX5RJwnul2DEg2oyoZyjLNoQM8WsvZiFKCRfC1O0J7iCvie3RZmQ==}
+    dev: false
+
+  /strict-uri-encode@2.0.0:
+    resolution: {integrity: sha512-QwiXZgpRcKkhTj2Scnn++4PKtWsH0kpzZ62L2R6c/LUVYv7hVnZqcg2+sMuT6R7Jusu1vviK/MFsu6kNJfWlEQ==}
+    engines: {node: '>=4'}
     dev: false
 
   /string-length@4.0.2:
@@ -11993,6 +12075,10 @@ packages:
   /supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  /supports-webp@3.0.0:
+    resolution: {integrity: sha512-5yfrbixhxDhyVma1Pz73MXHDyKtJaBaHCrJaoEKePF6gzm/7xI8Fd/vZu3oBx2a+jN/ZUpTrNKEzN9QgvdzIoQ==}
+    dev: false
 
   /suspend-react@0.0.8(react@18.2.0):
     resolution: {integrity: sha512-ZC3r8Hu1y0dIThzsGw0RLZplnX9yXwfItcvaIzJc2VQVi8TGyGDlu92syMB5ulybfvGLHAI5Ghzlk23UBPF8xg==}
@@ -12734,6 +12820,11 @@ packages:
   /vary@1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
+    dev: false
+
+  /vecn@1.3.1:
+    resolution: {integrity: sha512-SFlpdqZCjbNiV5RSel2Dvg0L49kSfeapn6SAJwMV/WCGvuYtqlSPWylTU35igGK5bAT1/Pu8QByKaAtALODJDw==}
+    engines: {node: '>=6.4.0'}
     dev: false
 
   /vm-browserify@1.1.2:

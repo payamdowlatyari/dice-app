@@ -16,7 +16,7 @@ button path{
 }
 
 ul{
-    height: 60%;
+    height: 100%;
 }
 
 #slider-app {
@@ -151,7 +151,7 @@ ul{
 .slide__image-wrapper {
   background-color: var(--color-accent);
   border-radius: 1%;
-  height: 65%;
+  height: 70%;
   left: 0%;
   overflow: hidden;
   position: absolute;
@@ -185,10 +185,11 @@ ul{
 
 .slide__headline {
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 400;
   position: absolute;
+  text-transform: uppercase;
   margin: auto;
-  bottom: 20%;
+  bottom: 15%;
 }
 
 .slide__content {
@@ -196,6 +197,7 @@ ul{
   opacity: 0;
   padding: 0.5em;
   position: relative;
+  min-height: 50vh;
   width: 100%;
   transition: transform var(--base-duration) var(--base-ease);
   visibility: hidden;
@@ -204,7 +206,7 @@ ul{
 .slide__desc {
     color: gray;
     position: absolute;
-    bottom: 10%;
+    bottom: 0;
 }
 .slide--current .slide__content {
   -webkit-animation: fade-in calc(var(--base-duration) / 2) var(--base-ease) forwards;

@@ -1,10 +1,6 @@
 import './base.css'
 import React from 'react';
   
-  // =========================
-  // Slide
-  // =========================
-  
   export class Slide extends React.Component {
     constructor(props) {
       super(props);
@@ -22,11 +18,11 @@ import React from 'react';
   
       el.style.setProperty(
         "--x",
-        event.clientX - (r.left + Math.floor(r.width / 2))
+        event.clientX - (r.left + Math.floor(r.width))
       );
       el.style.setProperty(
         "--y",
-        event.clientY - (r.top + Math.floor(r.height / 2))
+        event.clientY - (r.top + Math.floor(r.height))
       );
     }
   
@@ -69,40 +65,21 @@ import React from 'react';
             />
           </div>
           <article className="slide__content">
-            <p className="slide__headline menu__item">
+            <div className="slide__headline menu__item">
                 <a className='menu__item-inner' href={url}>{title}</a>
-                </p>
+            </div>
             <p className='slide__desc'>{description}</p>
-            {/* <button className="slide__action btn"></button> */}
           </article>
         </li>
       );
     }
   }
   
-  // =========================
-  // Slider control
-  // =========================
-  
-  const SliderControl = ({ type, title, handleClick }) => {
-    return (
-      <button className={`btn btn--${type}`} title={title} onClick={handleClick}>
-        <svg className="icon" viewBox="0 0 24 24">
-          <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-        </svg>
-      </button>
-    );
-  };
-  
-  // =========================
-  // Slider
-  // =========================
-  
   export class Slider extends React.Component {
     constructor(props) {
       super(props);
   
-      this.state = { current: 0 };
+      this.state = { current: 2 };
       this.handlePreviousClick = this.handlePreviousClick.bind(this);
       this.handleNextClick = this.handleNextClick.bind(this);
       this.handleSlideClick = this.handleSlideClick.bind(this);
@@ -160,20 +137,6 @@ import React from 'react';
               );
             })}
           </ul>
-  
-          <div className="slider__controls">
-            <SliderControl
-              type="previous"
-              title="Go to previous slide"
-              handleClick={this.handlePreviousClick}
-            />
-  
-            <SliderControl
-              type="next"
-              title="Go to next slide"
-              handleClick={this.handleNextClick}
-            />
-          </div>
         </div>
       );
     }
