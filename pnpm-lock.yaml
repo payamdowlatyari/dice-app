@@ -77,6 +77,9 @@ dependencies:
   react-type-animation:
     specifier: ^3.2.0
     version: 3.2.0(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
+  scroll-carousel:
+    specifier: ^1.2.7
+    version: 1.2.7
   stagger-text-reveal-animation:
     specifier: ^1.0.0
     version: 1.0.0(react-dom@18.2.0)(react@18.2.0)
@@ -11413,6 +11416,10 @@ packages:
       ajv: 8.12.0
       ajv-formats: 2.1.1(ajv@8.12.0)
       ajv-keywords: 5.1.0(ajv@8.12.0)
+    dev: false
+
+  /scroll-carousel@1.2.7:
+    resolution: {integrity: sha512-tiXdee3QJgyaUXVA5cW4s1qUNdpPG3jGFsoJ1Jc2kDS4X8ipIvwkPwgZSF9SYszCvF9BRxGduJDQunMWBzavdw==}
     dev: false
 
   /select-hose@2.0.0:

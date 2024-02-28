@@ -149,15 +149,14 @@ ul{
 }
 
 .slide__image-wrapper {
-  background-color: var(--color-accent);
-  border-radius: 1%;
+  border-radius: 2%;
   height: 70%;
   left: 0%;
   overflow: hidden;
   position: absolute;
   top: 0%;
   transition: transform calc(var(--base-duration) / 8) var(--base-ease);
-  width: 100%;
+  width: 110%;
 }
 
 .slide__image {

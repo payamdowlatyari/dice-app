@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 const Title = styled.h2`
   font-weight: 400;
-  line-height: 1.5em;
+  line-height: 1.2em;
 `;
 
 const Word = styled(motion.span)`

@@ -10,8 +10,6 @@ export default function Contact(){
         >
             <AnimatedTitle text="Contact"/>
             <div className='contacts'>
-
-            
             <div>
                 <h2>Email</h2>
             <div className='menu__item'>
@@ -23,7 +21,6 @@ export default function Contact(){
                 <div className='menu__item'>
             <a className='menu__item-inner' href='https://payamd-blog.vercel.app'>My Web Blog</a>
             </div>
-
             <div className='menu__item'>
             <a className='menu__item-inner' href='https://payamd-photo.vercel.app'>Photography</a>
             </div>
@@ -33,10 +30,7 @@ export default function Contact(){
                 <Social />          
             </div>
             </div>
-           
             <div>
-           
-                
             </div>
         </section>
     )

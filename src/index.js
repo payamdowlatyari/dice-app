@@ -1,9 +1,9 @@
 import { createRoot } from 'react-dom/client'
 import './styles.css'
 import App from './App'
-import Navbar from './components/Menu/Navbar'
 import Overlay from './components/Overlay'
 import { RevealEffectConfig } from 'react-reveal-effect';
+import Intro from './components/Intro'
 
 createRoot(document.getElementById('root')).render(
   <RevealEffectConfig mountOnBody={false} component='div'
@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')).render(
   >
     
      <App />
-    {/* <Navbar /> */}
+    <Intro />
     <Overlay />
     </RevealEffectConfig>
 )

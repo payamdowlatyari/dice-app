@@ -18,7 +18,7 @@ export default function App() {
     <Canvas orthographic camera={{ zoom: 80 }} gl={{ alpha: false, antialias: false, stencil: false, depth: false }} dpr={[1, 1.5]}>
       <Suspense fallback={null}>
         <ScrollControls damping={6} pages={5}> 
-            <Items />
+          <Items />
           <Scroll html>
            <Home />
            <About />
