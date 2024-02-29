@@ -103,7 +103,7 @@ section{
   transition: transform ease-out 0.1s;
 }
 
-/* #stalker {
+#stalker {
   position: fixed;
   margin-top: -10px;
   margin-left: -10px;
@@ -115,9 +115,9 @@ section{
   pointer-events: none;
   transition: transform ease-out 0.3s;
   z-index: 999;
-} */
+}
 
-.menu {
+/* .menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -128,7 +128,7 @@ section{
   padding-top: 100px;
   transform: translateX(-100%);
   will-change: transform;
-}
+} */
 
 ul,
 li {
@@ -264,7 +264,6 @@ button path {
   position: absolute;
   top: 0;
   left: 50%;
-  color: var(--accent);
 }
 
 .img-particles{

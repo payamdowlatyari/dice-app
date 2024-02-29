@@ -3,7 +3,7 @@
   --color-secondary: #101118;
   --color-accent: #1D1F2F;
   --color-focus: #6D64F7;
-  --base-duration: 600ms;
+  --base-duration: 1s;
   --base-ease: cubic-bezier(0.25, 0.46, 0.45, 0.84);
 }
 
@@ -183,7 +183,7 @@ ul{
 }
 
 .slide__headline {
-  font-size: 1em;
+  font-size: 2em;
   font-weight: 400;
   position: absolute;
   text-transform: uppercase;
@@ -196,7 +196,7 @@ ul{
   opacity: 0;
   padding: 0.5em;
   position: relative;
-  min-height: 50vh;
+  min-height: 60vh;
   width: 100%;
   transition: transform var(--base-duration) var(--base-ease);
   visibility: hidden;
@@ -204,12 +204,13 @@ ul{
 
 .slide__desc {
     color: gray;
+    font-size: 1.5em;
     position: absolute;
     bottom: 0;
 }
 .slide--current .slide__content {
-  -webkit-animation: fade-in calc(var(--base-duration) / 2) var(--base-ease) forwards;
-          animation: fade-in calc(var(--base-duration) / 2) var(--base-ease) forwards;
+  -webkit-animation: fade-in calc(var(--base-duration)) var(--base-ease) forwards;
+          animation: fade-in calc(var(--base-duration)) var(--base-ease) forwards;
   visibility: visible;
 }
 @media (hover: hover) {
@@ -221,17 +222,21 @@ ul{
 @-webkit-keyframes fade-in {
   from {
     opacity: 0;
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes fade-in {
   from {
     opacity: 0;
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
