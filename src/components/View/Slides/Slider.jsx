@@ -67,8 +67,8 @@ import React from 'react';
           <article className="slide__content">
             <div className="slide__headline menu__item">
                 <a className='menu__item-inner' href={url}>{title}</a>
+                <p className='slide__desc'>{description}</p>
             </div>
-            <p className='slide__desc'>{description}</p>
           </article>
         </li>
       );

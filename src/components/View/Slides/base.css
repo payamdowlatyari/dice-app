@@ -20,7 +20,7 @@ ul{
 }
 
 #slider-app {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -155,7 +155,7 @@ ul{
   overflow: hidden;
   position: absolute;
   top: 0%;
-  transition: transform calc(var(--base-duration) / 8) var(--base-ease);
+  transition: transform calc(var(--base-duration) / 7) var(--base-ease);
   width: 110%;
 }
 
@@ -183,30 +183,24 @@ ul{
 }
 
 .slide__headline {
-  font-size: 2em;
   font-weight: 400;
-  position: absolute;
   text-transform: uppercase;
   margin: auto;
-  bottom: 15%;
 }
 
 .slide__content {
   --d: 50;
   opacity: 0;
   padding: 0.5em;
-  position: relative;
-  min-height: 60vh;
-  width: 100%;
+  width: auto;
+  height: fit-content;
   transition: transform var(--base-duration) var(--base-ease);
   visibility: hidden;
+  backdrop-filter: brightness(0.25);
 }
 
 .slide__desc {
-    color: gray;
-    font-size: 1.5em;
-    position: absolute;
-    bottom: 0;
+    text-transform: none;
 }
 .slide--current .slide__content {
   -webkit-animation: fade-in calc(var(--base-duration)) var(--base-ease) forwards;

@@ -31,8 +31,8 @@ import {
         }}
         style={{
           willChange,
-          background: "#fff",
-          color: "#000",
+          background: "#000",
+          color: "#fff",
           position: "fixed",
           justifyContent: "center",
           transformOrigin: "top",
@@ -55,7 +55,7 @@ import {
           style={{
             willChange,
             alignSelf: "center",
-            fontSize: "2em",
+            mixBlendMode: "difference",
           }}
         >
           {rounded}
@@ -72,12 +72,15 @@ import {
           layout
           style={{
             willChange,
-            height: "5px",
-            width: `1px`,
+            height: "100%",
+            width: `1vw`,
             scaleX: rounded,
-            background: "#000",
-            position: "fixed",
-            bottom: "45vh",
+            background: "#fff",
+            color: "#000",
+            position: "absolute",
+            transformOrigin: "left",
+            left: "0",
+            bottom: "0",
           }}
         />
       </motion.div>

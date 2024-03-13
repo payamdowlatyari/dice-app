@@ -15,8 +15,6 @@ export default function Contact(){
             <div className='menu__item'>
             <a className='menu__item-inner' href='maito:pdowlatyari@gmail.com'>pdowlatyari@gmail.com</a>
             </div>
-            </div>
-            <div>
                 <h2>Links</h2>
                 <div className='menu__item'>
             <a className='menu__item-inner' href='https://payamd-blog.vercel.app'>My Web Blog</a>

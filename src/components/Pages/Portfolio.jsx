@@ -12,7 +12,6 @@ export default function Portfolio(){
             }}
         >
         <AnimatedTitle text="Portfolio"/>
-
         <div id='slider-app'>
         <Slider heading="Example Slider" slides={portfolio} />
         </div>    
