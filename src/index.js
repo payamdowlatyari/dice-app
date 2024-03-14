@@ -15,6 +15,8 @@ createRoot(document.getElementById('root')).render(
     
      <App />
     <Intro />
+
     <Overlay />
+    
     </RevealEffectConfig>
 )

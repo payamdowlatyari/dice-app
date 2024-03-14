@@ -3,11 +3,7 @@ import AnimatedTitle from '../View/AnimatedTitle';
 
 export default function Contact(){
     return (
-        <section id='contact'
-        style={{
-            height: "150vh"
-        }}
-        >
+        <section id='contact'>
             <AnimatedTitle text="Contact"/>
             <div className='contacts'>
             <div>
